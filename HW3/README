@@ -1,0 +1,6 @@
+->You can compile my programs(sortedArrays.cpp and part3.cpp) with makefile.
+
+->You can run the sortedArray.cpp with following command:
+./sortArrays 1 2 3 LRU normal 200 diskFileName.dat
+
+->You can run the part3.cpp with following command: ./part3
