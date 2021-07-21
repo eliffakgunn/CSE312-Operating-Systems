@@ -1,0 +1,24 @@
+***USAGE***
+->You must replace the syscall.h and syscall.cpp files in your CPU folder with the syscall.h and syscall.cpp files in my folder. Other files must be in spim folder to run correctly 
+->You can run the shell with following command: ./spim -file shell.asm
+
+***IMPLEMENTATION DETAILS***
+In this homework, I changed syscall.h and syscall.cpp in CPU folder. I added a syscall: CreateProcess_SYSCALL.
+
+CreateProcess_SYSCALL: Firstly, it reads file name and checks if the file name is equal "ShowPrimes.asm", "Factorize.asm", or "BubbleSort.asm".
+->If it is not equal one of these, it prints an error message and asks file name again. 
+->If it is equal one of these, it keeps current PC address, text segment, and register's contents. To keep register's contents I used a for loop and I keep all registers' contents in an array. Then, it reads file and runs the process. After process running, it changes registers' contents again and sets the PC to continue from where it left off.
+
+**.asm Files**
+ShowPrimes.asm: It prints all numbers between 0 and 1000, and it prints "prime" after the prime numbers.
+
+Factorize.asm: It asks a number from user and prints all positive factors of entered number. I didn't print negative factors because there are only positive factors in the given example in the homework file.
+
+BubbleSort.asm: Firstly, it asks size of array and elements of array from user. Then, it sorts the given integers in increasing order by  bubble sort algorithm.
+
+shell.asm: It asks the file name from user and calls CreateProcess_SYSCALL. After process runs, it ask the file name again and it continues like this.
+
+**shell.c**
+I wrote some part of shell to leads me when i write assembly program.
+
+
