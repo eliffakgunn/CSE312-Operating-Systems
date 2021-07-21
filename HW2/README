@@ -1,0 +1,7 @@
+***USAGE***
+->I used to_string function which is available in C++ 11. So you must change your makefile, or you can use my makefile.
+->You must replace the syscall.h and syscall.cpp files in your CPU folder with the syscall.h and syscall.cpp files in my folder. Other files must be in spim folder to run correctly 
+->You can run the kernels with following commands: ./spim -file SPIMOS_GTU_1.s or ./spim -file SPIMOS_GTU_2.s
+
+-In SPIMOS_GTU_1.s, a0 is 1 to indicate first kernel is runnig. Likewise a0 is 2 to indicate second kernel is runnig in SPIMOS_GTU_2.s.
+-I called init syscall then other operations done in syscall.cpp. I did not call other syscalls(thread_create etc.) from kernel. It does not matter that they can be called from kernel but i choose this way.
