@@ -4,3 +4,6 @@
 ./sortArrays 1 2 3 LRU normal 200 diskFileName.dat
 
 ->You can run the part3.cpp with following command: ./part3
+
+You can check report for details.
+
