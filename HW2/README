@@ -6,4 +6,4 @@
 -In SPIMOS_GTU_1.s, a0 is 1 to indicate first kernel is runnig. Likewise a0 is 2 to indicate second kernel is runnig in SPIMOS_GTU_2.s.
 -I called init syscall then other operations done in syscall.cpp. I did not call other syscalls(thread_create etc.) from kernel. It does not matter that they can be called from kernel but i choose this way.
 
-You can see all details in report.
+You can check report for details.
